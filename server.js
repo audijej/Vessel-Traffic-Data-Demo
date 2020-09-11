@@ -10,9 +10,9 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
 // Serve up static assets (usually on heroku)
-// if (process.env.NODE_ENV === "production") {
+if (process.env.NODE_ENV === "production") {
   app.use(express.static("client/build"));
-// }
+}
 
 app.use(require('body-parser').urlencoded({ extended: false }));
 // app.use(require('express-session')({ secret: 'keyboard cat', resave: true, saveUninitialized: true }));
